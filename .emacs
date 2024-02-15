@@ -39,3 +39,21 @@
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
+
+(setq backup-inhibited t)
+
+;; General window appearance
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+;; Powerline
+(require 'powerline)
+(powerline-default-theme)
+;; Splash screen appearance 
+(defun splash-screen-conditional()
+  "Open startup screen instead of *scratch* buffer."
+  (when (and (string-equal "*scratch*" (buffer-name)) (not (buffer-file-name)))
+          (display-splash-screen))
+  )
+(add-hook 'after-init-hook 'splash-screen-conditional)
