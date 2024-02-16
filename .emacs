@@ -25,6 +25,7 @@
 		     package-build
 		     epl
 		     git
+		     req-package
 		     commander
 		     f
 		     dash
@@ -133,6 +134,7 @@
 (setq fci-rule-use-dashes 0.5)
 (add-hook 'prog-mode-hook 'fci-mode)
 (add-hook 'prog-mode-hook (lambda() (set-fill-column 80)))
+(require 'req-package)
 
 ;; FIC mode to find TODO, FIXME, BUG, and KLUDGE
 (add-hook 'prog-mode-hook 'fic-mode)
@@ -143,3 +145,33 @@
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.c\\'" . c-mode))
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+
+;; C++ Configuration
+(req-package company :config
+  (progn
+	  (add-hook 'after-init-hook 'global-company-mode)
+	  (global-set-key (kbd "M-/") 'company-complete-common-or-cycle)
+	  (setq company-idle-delay 0)))
+(req-package flycheck :config
+  (progn
+	  (global-flycheck-mode)))
+
+(add-hook 'c++-mode-hook (lambda() (setq-default tab-width 2 indent-tabs-mode nil)))
+(add-hook 'c-mode-hook (lambda() (setq-default tab-width 2 indent-tabs-mode nil)))
+
+;; CMake Configuration
+(autoload 'cmake-font-lock-activate "cmake-font-lock" nil t)
+(add-hook 'cmake-mode-hook 'cmake-font-lock-activate)
+
+;; Python Configuration
+(req-package company-jedi :require company-jedi :config
+  (progn
+	  (defun my-python-mode-hook()
+	    (add-to-list 'company-backends 'company-jedi))
+	  (add-hook 'python-mode-hook 'my-python-mode-hook)))
+(add-hook 'python-mode-hook (lambda() 
+                              (set-fill-column 80)))
+(add-hook 'python-mode-hook (lambda() 
+                              (setq-default tab-width 4 indent-tabs-mode nil)))
+
+(req-package-finish)
