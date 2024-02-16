@@ -1,5 +1,6 @@
 ;;; EMACS CONFIGURATION FILE
 
+;; Install packages ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Desired Packages
 (setq package-list '(arduino-mode
 		     yasnippet-snippets
@@ -8,6 +9,7 @@
 		     company-rtags
 		     cmake-font-lock
 		     cmake-mode
+		     fic-mode
 		     restart-emacs
 		     powerline
 		     company-jedi
@@ -19,6 +21,7 @@
 		     cyberpunk-2019-theme
 		     cyberpunk-theme
 		     ansi
+		     fill-column-indicator
 		     package-build
 		     epl
 		     git
@@ -41,6 +44,7 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+;; Set Colors and Theme ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Theme
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -48,7 +52,27 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("562ffa9a1f65610e8be3e30297438e67b907b612aecf404f126fbc9c265c0fdc" default)))
+   '("562ffa9a1f65610e8be3e30297438e67b907b612aecf404f126fbc9c265c0fdc" default))
+ '(package-selected-packages
+   '(yasnippet-snippets
+     spacemacs-theme
+     restart-emacs
+     powerline
+     package-build
+     nlinum
+     jedi
+     git
+     flycheck-rtags
+     epl
+     cyberpunk-theme
+     cyberpunk-2019-theme
+     company-rtags
+     company-jedi
+     company-irony
+     commander
+     cmake-font-lock
+     arduino-mode
+     ansi)))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'black-space)
 ; add powerline customizations
@@ -57,9 +81,18 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(powerline-active0 ((t (:inherit mode-line :background "blue1" :foreground "SystemWindow"))))
- '(powerline-active1 ((t (:inherit mode-line :background "medium violet red" :foreground "white"))))
- '(powerline-active2 ((t (:inherit mode-line :background "black" :foreground "white")))))
+ '(powerline-active0 ((t
+		       (:inherit mode-line
+				 :background "blue1"
+				 :foreground "SystemWindow"))))
+ '(powerline-active1 ((t
+		       (:inherit mode-line
+				 :background "medium violet red"
+				 :foreground "white"))))
+ '(powerline-active2 ((t
+		       (:inherit mode-line
+				 :background "black"
+				 :foreground "white")))))
 
 ;; General window appearance
 (scroll-bar-mode -1)
@@ -91,3 +124,22 @@
 ;; enable yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;; Programming config ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; show parenthesis and use a ruler at 80 columns
+(add-hook 'prog-mode-hook 'show-paren-mode)
+(setq fci-rule-color "#ff0000")
+(setq fci-rule-width 1)
+(setq fci-rule-use-dashes 0.5)
+(add-hook 'prog-mode-hook 'fci-mode)
+(add-hook 'prog-mode-hook (lambda() (set-fill-column 80)))
+
+;; FIC mode to find TODO, FIXME, BUG, and KLUDGE
+(add-hook 'prog-mode-hook 'fic-mode)
+
+;; Custom file extensions
+(add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.c\\'" . c-mode))
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
