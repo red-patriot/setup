@@ -13,3 +13,4 @@ git config --global rerere.autoUpdate true
 # Make displaying branches nicer
 git config --global column.ui auto
 git config --global branch.sort -committerdate
+
