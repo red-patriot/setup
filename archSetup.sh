@@ -5,7 +5,7 @@ sudo echo 'ILoveCandy' > /etc/pacman.conf
 sudo pacman -Syu
 
 # Install needed packages
-pacman -S --needed git base-devel cmake gcc pacman-contrib zoxide
+pacman -S --needed git base-devel cmake gcc pacman-contrib zoxide emacs
 
 # Setup paccache timer to clean temp files
 sudo systemctl enable paccache.timer
