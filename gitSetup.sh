@@ -7,9 +7,12 @@ git config --global alias.gone '! git branch -vv | grep ": gone]"|  grep -v "\*"
 git config --global alias.staash 'stash --all'
 git config --global core.editor emacs
 git config --global alias.gud '!python -m webbrowser https://git-scm.com/docs'
+git config --global alias.last 'log -1'
+git config --global alias.commitan 'commit --amend --no-edit'
+git config --global alias.staash 'stash --all'
 
 # Enable Reuse Recorded Resolution
-git config --global rerere.unabled true
+git config --global rerere.enabled true
 git config --global rerere.autoUpdate true
 
 # Make displaying branches nicer
