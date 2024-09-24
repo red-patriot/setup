@@ -2,7 +2,7 @@
 sudo apt-add-repository ppa:git-core/ppa
 sudo apt update -y
 
-sudo apt install git -y
+nsudo apt install git -y
 
 # Setup useful aliases that I like
 git config --global alias.fap 'fetch --all --prune'
