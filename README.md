@@ -5,3 +5,5 @@ Contains scripts and files for the following:
  - setting up a nice bash shell prompt
  - Adding nice git aliases
  - Setting up some default git behavior
+ - VSCode config
+ - Git config
