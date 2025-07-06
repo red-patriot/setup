@@ -1,0 +1,131 @@
+{
+  "editor.rulers": [80, 100],
+  "[cpp]": {
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.rulers": [80, 100, 120],
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.rulers": [72, 80]
+  },
+  "[json]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#CC0000",
+    "[One Dark Pro Darker]": {
+      "editor.background": "#000000",
+      "sideBar.background": "#111111",
+      "terminal.background": "#000000",
+      "editor.lineHighlightBackground": "#111111",
+      "editorBracketHighlight.foreground1": "#ffb86c",
+      "editorBracketHighlight.foreground2": "#8be9fd",
+      "editorBracketHighlight.foreground3": "#bd93f9",
+      "editorBracketHighlight.foreground4": "#50fa7b",
+      "editorBracketHighlight.foreground5": "#f1fa8c",
+      "editorBracketHighlight.foreground6": "#abb2c0"
+    },
+    "[Material Theme Darker]": {
+      "editor.background": "#000000",
+      "sideBar.background": "#111111",
+      "terminal.background": "#000000",
+      "activityBarBadge.background": "#AB47BC",
+      "activityBar.activeBorder": "#AB47BC",
+      "list.activeSelectionForeground": "#AB47BC",
+      "list.inactiveSelectionForeground": "#AB47BC",
+      "list.highlightForeground": "#AB47BC",
+      "scrollbarSlider.activeBackground": "#AB47BC50",
+      "editorSuggestWidget.highlightForeground": "#AB47BC",
+      "textLink.foreground": "#AB47BC",
+      "progressBar.background": "#AB47BC",
+      "pickerGroup.foreground": "#AB47BC",
+      "tab.activeBorder": "#AB47BC",
+      "notificationLink.foreground": "#AB47BC",
+      "editorWidget.resizeBorder": "#AB47BC",
+      "editorWidget.border": "#AB47BC",
+      "settings.modifiedItemIndicator": "#AB47BC",
+      "settings.headerForeground": "#AB47BC",
+      "panelTitle.activeBorder": "#AB47BC",
+      "breadcrumb.activeSelectionForeground": "#AB47BC",
+      "menu.selectionForeground": "#AB47BC",
+      "menubar.selectionForeground": "#AB47BC",
+      "editor.findMatchBorder": "#AB47BC",
+      "selection.background": "#AB47BC40",
+      "statusBarItem.remoteBackground": "#AB47BC",
+      "editorBracketHighlight.foreground1": "#ffb86c",
+      "editorBracketHighlight.foreground2": "#8be9fd",
+      "editorBracketHighlight.foreground3": "#bd93f9",
+      "editorBracketHighlight.foreground4": "#50fa7b",
+      "editorBracketHighlight.foreground5": "#f1fa8c",
+      "editorBracketHighlight.foreground6": "#abb2c0"
+    }
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.files.customClones": [
+    {
+      "name": "cpp-test",
+      "base": "cpp",
+      "color": "light-green-300",
+      "fileExtensions": ["test.cpp", "test.cxx"]
+    },
+    {
+      "name": "cpp-module",
+      "base": "cpp",
+      "color": "teal-500",
+      "fileExtensions": ["cxx"]
+    },
+    {
+      "name": "fluir",
+      "base": "xml",
+      "color": "light-blue-300",
+      "fileExtensions": ["fl", "flbc", "flhb"]
+    }
+  ],
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "cmakeFormat.exePath": "/usr/bin/cmake-format",
+  "C_Cpp.clang_format_style": "file:/home/bltan/source/.clang-format",
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format-19",
+  "C_Cpp.clang_format_sortIncludes": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "monospace",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.fl": "xml",
+    "*.errors": "plaintext",
+    "*.asg": "plaintext"
+  },
+  "editor.minimap.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.configPath": "${workspaceFolder}/.prettierrc",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
