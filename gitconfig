@@ -1,0 +1,51 @@
+[alias]
+	fap = fetch --all --prune
+	pushfl = push --force-with-lease
+	stats = status
+	graph = log --graph --all --format=\"%h %s%n    (%an, %ar)\" --abbrev-commit
+	staash = stash --all
+	gud = !python -m webbrowser https://git-scm.com/docs
+	last = log -1
+	commitan = commit --amend --no-edit
+	autofix = rebase --autosquash -i
+[core]
+	editor = emacs
+[rerere]
+	enabled = true
+	autoUpdate = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[pull]
+	rebase = true
+[diff]
+	algorithm = histogram
+	colorMoved = true
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[commit]
+	verbose = true
+	gpgsign = false
+[rebase]
+	autoSquash = true
+	updateRefs = true
+[user]
+	email = bltanner105@gmail.com
+	name = Bryson Tanner
+[merge]
+	tool = kdiff3
