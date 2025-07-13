@@ -10,6 +10,7 @@ sudo apt install \
     cmake \
     ninja-build \
     terminator \
+    fonta-firacode \
     btop -y
 
 # Set up git prompt
