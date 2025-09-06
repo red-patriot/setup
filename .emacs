@@ -2,8 +2,7 @@
 
 ;; Install packages ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Desired Packages
-(setq package-list '(arduino-mode
-		     yasnippet-snippets
+(setq package-list '(yasnippet-snippets
 		     yasnippet
 		     flycheck-rtags
 		     company-rtags
@@ -22,15 +21,13 @@
 		     cyberpunk-theme
 		     ansi
 		     fill-column-indicator
-		     package-build
 		     epl
 		     git
 		     req-package
 		     commander
 		     f
 		     dash
-		     s
-		     nlinum))
+		     s))
 
 ;; Load package manager and repositories
 (setq package-archives '(("melpa" . "http://melpa.org/packages/")
