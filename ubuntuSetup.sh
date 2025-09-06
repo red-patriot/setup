@@ -1,6 +1,3 @@
-# Setup git
-source ./gitSetup.sh
-
 # Install Packages
 sudo apt install \
     emacs \
@@ -13,6 +10,9 @@ sudo apt install \
     fonts-firacode \
     btop -y
 
+# Setup git
+source ./gitSetup.sh
+
 # Set up git prompt
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 cp RP.bgptheme ~/.bash-git-prompt/themes/
@@ -22,3 +22,6 @@ source cdSetup.sh
 
 # Update bashrc information
 cat bashrc-fill >> ~/.bashrc
+
+source ./emacsSetup.sh
+source ./vscodeSetup.sh
