@@ -8,7 +8,8 @@ sudo apt install \
     ninja-build \
     terminator \
     fonts-firacode \
-    btop -y
+    btop \
+    python-is-python3 -y
 
 # Setup git
 source ./gitSetup.sh
@@ -25,3 +26,4 @@ cat bashrc-fill >> ~/.bashrc
 
 source ./emacsSetup.sh
 source ./vscodeSetup.sh
+source ./nvmSetup.sh
